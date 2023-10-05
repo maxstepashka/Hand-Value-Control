@@ -28,6 +28,7 @@ draw = mp.solutions.drawing_utils
 
 
 while True:
+    # Выход из программы по нажатию клавиши Esc
     if cv2.waitKey(1) & 0xFF == 27:
         break
     good, image = cam.read()
