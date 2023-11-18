@@ -32,6 +32,7 @@ while True:
     if cv2.waitKey(1) & 0xFF == 27:
         break
     good, image = cam.read()
+    # Переворот изображения
     image = cv2.flip(image, -1)
     imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     results = hands.process(imageRGB)
